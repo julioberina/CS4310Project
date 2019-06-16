@@ -12,28 +12,36 @@ public class Main {
     while (file.hasNextLine())
       jobs.put(file.nextLine(), Integer.parseInt(file.nextLine()));
 
-    firstComeFirstServe((LinkedHashMap)jobs.clone());
-    shortestJobFirst((LinkedHashMap)jobs.clone());
-    roundRobin2((LinkedHashMap)jobs.clone());
-    roundRobin5((LinkedHashMap)jobs.clone());
-
-    for (String key : jobs.keySet())
-      System.out.println(key + " => " + jobs.get(key));
+    firstComeFirstServe(jobs);
+    shortestJobFirst(jobs);
+    roundRobin(jobs, 2);
+    roundRobin(jobs, 5);
   }
 
-  public void firstComeFirstServe(LinkedHashMap jobs) {
+  public static void firstComeFirstServe(LinkedHashMap<String, Integer> jobs) {
+    int time = 0;
+    int tat = 0;
+
+    System.out.println("First Come First Serve (FCFS)");
+    System.out.println("Job\t\tStart Time\tEnd Time\tJob Description");
+
+    for (String job : jobs.keySet()) {
+      System.out.print(job + "\t\t" + time + "\t\t");
+      time += jobs.get(job);
+      tat += time;
+      System.out.println(time + "\t\t" + "Completed " + job + " @" + time);
+    }
+
+    System.out.print("\n");
+    System.out.println("Average turnaround time: " + (tat / jobs.keySet().size()));
+    System.out.print("\n");
+  }
+
+  public static void shortestJobFirst(LinkedHashMap<String, Integer> jobs) {
 
   }
 
-  public void shortestJobFirst(LinkedHashMap jobs) {
-
-  }
-
-  public void roundRobin2(LinkedHashMap jobs) {
-
-  }
-
-  public void roundRobin5(LinkedHashMap jobs) {
+  public static void roundRobin(LinkedHashMap<String, Integer> jobs, int ts) {
 
   }
 }
