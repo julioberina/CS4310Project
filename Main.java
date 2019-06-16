@@ -51,7 +51,7 @@ public class Main {
 
     for (String job : jobs.keySet())  processQueue.add(job);
 
-    System.out.println("First Come First Serve (RR-" + ts + ")");
+    System.out.println("Round Robin, time slice = " + ts + " (RR-" + ts + ")");
     System.out.println("Job\t\tStart Time\tEnd Time\tJob Description");
 
     while (!processQueue.isEmpty()) {
