@@ -2,8 +2,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.Map;
 import java.util.LinkedHashMap;
+import java.util.SortedMap;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Main {
   public static void main(String[] args) throws IOException {
@@ -39,7 +42,27 @@ public class Main {
   }
 
   public static void shortestJobFirst(LinkedHashMap<String, Integer> jobs) {
+    int time = 0;
+    float tat = 0.f;
+    LinkedHashMap<String, Integer> jobMap = jobs.entrySet()
+        .stream()
+        .sorted(Map.Entry.<String, Integer>comparingByValue())
+        .collect(Collectors.toMap(Map.Entry::getKey,
+                                  Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 
+    System.out.println("Shortest Job First (SJF)");
+    System.out.println("Job\t\tStart Time\tEnd Time\tJob Description");
+
+    for (String job : jobMap.keySet()) {
+      System.out.print(job + "\t\t" + time + "\t\t");
+      time += jobs.get(job);
+      tat += time;
+      System.out.println(time + "\t\t" + "Completed " + job + " @" + time);
+    }
+
+    System.out.print("\n");
+    System.out.println("Average turnaround time: " + (tat / jobs.keySet().size()));
+    System.out.print("\n");
   }
 
   @SuppressWarnings("unchecked")
