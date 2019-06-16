@@ -21,7 +21,7 @@ public class Main {
 
   public static void firstComeFirstServe(LinkedHashMap<String, Integer> jobs) {
     int time = 0;
-    int tat = 0;
+    float tat = 0.f;
 
     System.out.println("First Come First Serve (FCFS)");
     System.out.println("Job\t\tStart Time\tEnd Time\tJob Description");
@@ -47,7 +47,7 @@ public class Main {
     LinkedHashMap<String, Integer> jobMap = (LinkedHashMap<String, Integer>)jobs.clone();
     ArrayList<String> processQueue = new ArrayList<String>();
     int time = 0;
-    int tat = 0;
+    float tat = 0.f;
 
     for (String job : jobs.keySet())  processQueue.add(job);
 
