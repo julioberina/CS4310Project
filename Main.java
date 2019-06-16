@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.LinkedHashMap;
+import java.util.ArrayList;
 
 public class Main {
   public static void main(String[] args) throws IOException {
@@ -41,7 +42,38 @@ public class Main {
 
   }
 
+  @SuppressWarnings("unchecked")
   public static void roundRobin(LinkedHashMap<String, Integer> jobs, int ts) {
+    LinkedHashMap<String, Integer> jobMap = (LinkedHashMap<String, Integer>)jobs.clone();
+    ArrayList<String> processQueue = new ArrayList<String>();
+    int time = 0;
+    int tat = 0;
 
+    for (String job : jobs.keySet())  processQueue.add(job);
+
+    System.out.println("First Come First Serve (RR-" + ts + ")");
+    System.out.println("Job\t\tStart Time\tEnd Time\tJob Description");
+
+    while (!processQueue.isEmpty()) {
+      String job = processQueue.remove(0);
+      System.out.print(job + "\t\t" + time + "\t\t");
+
+      if (jobMap.get(job) <= ts) {
+        time += jobMap.get(job);
+        tat += time;
+        jobMap.put(job, 0);
+        System.out.println(time + "\t\t" + "Completed " + job + "@" + time);
+      }
+      else {
+        time += ts;
+        jobMap.put(job, jobMap.get(job) - ts);
+        System.out.println(time);
+        processQueue.add(job);
+      }
+    }
+
+    System.out.print("\n");
+    System.out.println("Average turnaround time: " + (tat / jobs.keySet().size()));
+    System.out.print("\n");
   }
 }
