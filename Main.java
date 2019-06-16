@@ -62,7 +62,7 @@ public class Main {
         time += jobMap.get(job);
         tat += time;
         jobMap.put(job, 0);
-        System.out.println(time + "\t\t" + "Completed " + job + "@" + time);
+        System.out.println(time + "\t\t" + "Completed " + job + " @" + time);
       }
       else {
         time += ts;
