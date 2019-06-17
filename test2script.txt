@@ -1,0 +1,141 @@
+Script started on 2019-06-16 16:59:08-0700
+CS4310Project $ make test2
+java Main testdata2.txt
+First Come First Serve (FCFS)
+Job		Start Time	End Time	Job Description
+Job201		0		22		Completed Job201 @22
+Job202		22		34		Completed Job202 @34
+Job203		34		40		Completed Job203 @40
+Job204		40		53		Completed Job204 @53
+Job205		53		61		Completed Job205 @61
+Job206		61		62		Completed Job206 @62
+Job207		62		71		Completed Job207 @71
+Job208		71		99		Completed Job208 @99
+Job209		99		103		Completed Job209 @103
+Job210		103		125		Completed Job210 @125
+
+Average turnaround time: 67.0
+
+Shortest Job First (SJF)
+Job		Start Time	End Time	Job Description
+Job206		0		1		Completed Job206 @1
+Job209		1		5		Completed Job209 @5
+Job203		5		11		Completed Job203 @11
+Job205		11		19		Completed Job205 @19
+Job207		19		28		Completed Job207 @28
+Job202		28		40		Completed Job202 @40
+Job204		40		53		Completed Job204 @53
+Job201		53		75		Completed Job201 @75
+Job210		75		97		Completed Job210 @97
+Job208		97		125		Completed Job208 @125
+
+Average turnaround time: 45.4
+
+Round Robin, time slice = 2 (RR-2)
+Job		Start Time	End Time	Job Description
+Job201		0		2
+Job202		2		4
+Job203		4		6
+Job204		6		8
+Job205		8		10
+Job206		10		11		Completed Job206 @11
+Job207		11		13
+Job208		13		15
+Job209		15		17
+Job210		17		19
+Job201		19		21
+Job202		21		23
+Job203		23		25
+Job204		25		27
+Job205		27		29
+Job207		29		31
+Job208		31		33
+Job209		33		35		Completed Job209 @35
+Job210		35		37
+Job201		37		39
+Job202		39		41
+Job203		41		43		Completed Job203 @43
+Job204		43		45
+Job205		45		47
+Job207		47		49
+Job208		49		51
+Job210		51		53
+Job201		53		55
+Job202		55		57
+Job204		57		59
+Job205		59		61		Completed Job205 @61
+Job207		61		63
+Job208		63		65
+Job210		65		67
+Job201		67		69
+Job202		69		71
+Job204		71		73
+Job207		73		74		Completed Job207 @74
+Job208		74		76
+Job210		76		78
+Job201		78		80
+Job202		80		82		Completed Job202 @82
+Job204		82		84
+Job208		84		86
+Job210		86		88
+Job201		88		90
+Job204		90		91		Completed Job204 @91
+Job208		91		93
+Job210		93		95
+Job201		95		97
+Job208		97		99
+Job210		99		101
+Job201		101		103
+Job208		103		105
+Job210		105		107
+Job201		107		109
+Job208		109		111
+Job210		111		113
+Job201		113		115		Completed Job201 @115
+Job208		115		117
+Job210		117		119		Completed Job210 @119
+Job208		119		121
+Job208		121		123
+Job208		123		125		Completed Job208 @125
+
+Average turnaround time: 75.6
+
+Round Robin, time slice = 5 (RR-5)
+Job		Start Time	End Time	Job Description
+Job201		0		5
+Job202		5		10
+Job203		10		15
+Job204		15		20
+Job205		20		25
+Job206		25		26		Completed Job206 @26
+Job207		26		31
+Job208		31		36
+Job209		36		40		Completed Job209 @40
+Job210		40		45
+Job201		45		50
+Job202		50		55
+Job203		55		56		Completed Job203 @56
+Job204		56		61
+Job205		61		64		Completed Job205 @64
+Job207		64		68		Completed Job207 @68
+Job208		68		73
+Job210		73		78
+Job201		78		83
+Job202		83		85		Completed Job202 @85
+Job204		85		88		Completed Job204 @88
+Job208		88		93
+Job210		93		98
+Job201		98		103
+Job208		103		108
+Job210		108		113
+Job201		113		115		Completed Job201 @115
+Job208		115		120
+Job210		120		122		Completed Job210 @122
+Job208		122		125		Completed Job208 @125
+
+Average turnaround time: 78.9
+
+CS4310Project $ exit
+exit
+
+Script done on 2019-06-16 16:59:13-0700

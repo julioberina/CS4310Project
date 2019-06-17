@@ -1,0 +1,78 @@
+Script started on 2019-06-16 16:51:07-0700
+CS4310Project $ make test1
+java Main testdata1.txt
+First Come First Serve (FCFS)
+Job		Start Time	End Time	Job Description
+Job101		0		8		Completed Job101 @8
+Job102		8		13		Completed Job102 @13
+Job103		13		25		Completed Job103 @25
+Job104		25		42		Completed Job104 @42
+Job105		42		44		Completed Job105 @44
+Job106		44		50		Completed Job106 @50
+
+Average turnaround time: 30.333334
+
+Shortest Job First (SJF)
+Job		Start Time	End Time	Job Description
+Job105		0		2		Completed Job105 @2
+Job102		2		7		Completed Job102 @7
+Job106		7		13		Completed Job106 @13
+Job101		13		21		Completed Job101 @21
+Job103		21		33		Completed Job103 @33
+Job104		33		50		Completed Job104 @50
+
+Average turnaround time: 21.0
+
+Round Robin, time slice = 2 (RR-2)
+Job		Start Time	End Time	Job Description
+Job101		0		2
+Job102		2		4
+Job103		4		6
+Job104		6		8
+Job105		8		10		Completed Job105 @10
+Job106		10		12
+Job101		12		14
+Job102		14		16
+Job103		16		18
+Job104		18		20
+Job106		20		22
+Job101		22		24
+Job102		24		25		Completed Job102 @25
+Job103		25		27
+Job104		27		29
+Job106		29		31		Completed Job106 @31
+Job101		31		33		Completed Job101 @33
+Job103		33		35
+Job104		35		37
+Job103		37		39
+Job104		39		41
+Job103		41		43		Completed Job103 @43
+Job104		43		45
+Job104		45		47
+Job104		47		49
+Job104		49		50		Completed Job104 @50
+
+Average turnaround time: 32.0
+
+Round Robin, time slice = 5 (RR-5)
+Job		Start Time	End Time	Job Description
+Job101		0		5
+Job102		5		10		Completed Job102 @10
+Job103		10		15
+Job104		15		20
+Job105		20		22		Completed Job105 @22
+Job106		22		27
+Job101		27		30		Completed Job101 @30
+Job103		30		35
+Job104		35		40
+Job106		40		41		Completed Job106 @41
+Job103		41		43		Completed Job103 @43
+Job104		43		48
+Job104		48		50		Completed Job104 @50
+
+Average turnaround time: 32.666668
+
+CS4310Project $ exit
+exit
+
+Script done on 2019-06-16 16:51:14-0700

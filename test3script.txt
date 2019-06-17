@@ -1,0 +1,242 @@
+Script started on 2019-06-16 17:06:23-0700
+CS4310Project $ make test3
+java Main testdata3.txt
+First Come First Serve (FCFS)
+Job		Start Time	End Time	Job Description
+Job301		0		17		Completed Job301 @17
+Job302		17		30		Completed Job302 @30
+Job303		30		55		Completed Job303 @55
+Job304		55		64		Completed Job304 @64
+Job305		64		77		Completed Job305 @77
+Job306		77		83		Completed Job306 @83
+Job307		83		88		Completed Job307 @88
+Job308		88		90		Completed Job308 @90
+Job309		90		101		Completed Job309 @101
+Job310		101		121		Completed Job310 @121
+Job311		121		137		Completed Job311 @137
+Job312		137		143		Completed Job312 @143
+Job313		143		160		Completed Job313 @160
+Job314		160		164		Completed Job314 @164
+Job315		164		182		Completed Job315 @182
+Job316		182		194		Completed Job316 @194
+Job317		194		206		Completed Job317 @206
+Job318		206		237		Completed Job318 @237
+
+Average turnaround time: 119.388885
+
+Shortest Job First (SJF)
+Job		Start Time	End Time	Job Description
+Job308		0		2		Completed Job308 @2
+Job314		2		6		Completed Job314 @6
+Job307		6		11		Completed Job307 @11
+Job306		11		17		Completed Job306 @17
+Job312		17		23		Completed Job312 @23
+Job304		23		32		Completed Job304 @32
+Job309		32		43		Completed Job309 @43
+Job316		43		55		Completed Job316 @55
+Job317		55		67		Completed Job317 @67
+Job302		67		80		Completed Job302 @80
+Job305		80		93		Completed Job305 @93
+Job311		93		109		Completed Job311 @109
+Job301		109		126		Completed Job301 @126
+Job313		126		143		Completed Job313 @143
+Job315		143		161		Completed Job315 @161
+Job310		161		181		Completed Job310 @181
+Job303		181		206		Completed Job303 @206
+Job318		206		237		Completed Job318 @237
+
+Average turnaround time: 88.44444
+
+Round Robin, time slice = 2 (RR-2)
+Job		Start Time	End Time	Job Description
+Job301		0		2
+Job302		2		4
+Job303		4		6
+Job304		6		8
+Job305		8		10
+Job306		10		12
+Job307		12		14
+Job308		14		16		Completed Job308 @16
+Job309		16		18
+Job310		18		20
+Job311		20		22
+Job312		22		24
+Job313		24		26
+Job314		26		28
+Job315		28		30
+Job316		30		32
+Job317		32		34
+Job318		34		36
+Job301		36		38
+Job302		38		40
+Job303		40		42
+Job304		42		44
+Job305		44		46
+Job306		46		48
+Job307		48		50
+Job309		50		52
+Job310		52		54
+Job311		54		56
+Job312		56		58
+Job313		58		60
+Job314		60		62		Completed Job314 @62
+Job315		62		64
+Job316		64		66
+Job317		66		68
+Job318		68		70
+Job301		70		72
+Job302		72		74
+Job303		74		76
+Job304		76		78
+Job305		78		80
+Job306		80		82		Completed Job306 @82
+Job307		82		83		Completed Job307 @83
+Job309		83		85
+Job310		85		87
+Job311		87		89
+Job312		89		91		Completed Job312 @91
+Job313		91		93
+Job315		93		95
+Job316		95		97
+Job317		97		99
+Job318		99		101
+Job301		101		103
+Job302		103		105
+Job303		105		107
+Job304		107		109
+Job305		109		111
+Job309		111		113
+Job310		113		115
+Job311		115		117
+Job313		117		119
+Job315		119		121
+Job316		121		123
+Job317		123		125
+Job318		125		127
+Job301		127		129
+Job302		129		131
+Job303		131		133
+Job304		133		134		Completed Job304 @134
+Job305		134		136
+Job309		136		138
+Job310		138		140
+Job311		140		142
+Job313		142		144
+Job315		144		146
+Job316		146		148
+Job317		148		150
+Job318		150		152
+Job301		152		154
+Job302		154		156
+Job303		156		158
+Job305		158		160
+Job309		160		161		Completed Job309 @161
+Job310		161		163
+Job311		163		165
+Job313		165		167
+Job315		167		169
+Job316		169		171		Completed Job316 @171
+Job317		171		173		Completed Job317 @173
+Job318		173		175
+Job301		175		177
+Job302		177		178		Completed Job302 @178
+Job303		178		180
+Job305		180		181		Completed Job305 @181
+Job310		181		183
+Job311		183		185
+Job313		185		187
+Job315		187		189
+Job318		189		191
+Job301		191		193
+Job303		193		195
+Job310		195		197
+Job311		197		199		Completed Job311 @199
+Job313		199		201
+Job315		201		203
+Job318		203		205
+Job301		205		206		Completed Job301 @206
+Job303		206		208
+Job310		208		210
+Job313		210		211		Completed Job313 @211
+Job315		211		213		Completed Job315 @213
+Job318		213		215
+Job303		215		217
+Job310		217		219		Completed Job310 @219
+Job318		219		221
+Job303		221		223
+Job318		223		225
+Job303		225		227
+Job318		227		229
+Job303		229		230		Completed Job303 @230
+Job318		230		232
+Job318		232		234
+Job318		234		236
+Job318		236		237		Completed Job318 @237
+
+Average turnaround time: 158.16667
+
+Round Robin, time slice = 5 (RR-5)
+Job		Start Time	End Time	Job Description
+Job301		0		5
+Job302		5		10
+Job303		10		15
+Job304		15		20
+Job305		20		25
+Job306		25		30
+Job307		30		35		Completed Job307 @35
+Job308		35		37		Completed Job308 @37
+Job309		37		42
+Job310		42		47
+Job311		47		52
+Job312		52		57
+Job313		57		62
+Job314		62		66		Completed Job314 @66
+Job315		66		71
+Job316		71		76
+Job317		76		81
+Job318		81		86
+Job301		86		91
+Job302		91		96
+Job303		96		101
+Job304		101		105		Completed Job304 @105
+Job305		105		110
+Job306		110		111		Completed Job306 @111
+Job309		111		116
+Job310		116		121
+Job311		121		126
+Job312		126		127		Completed Job312 @127
+Job313		127		132
+Job315		132		137
+Job316		137		142
+Job317		142		147
+Job318		147		152
+Job301		152		157
+Job302		157		160		Completed Job302 @160
+Job303		160		165
+Job305		165		168		Completed Job305 @168
+Job309		168		169		Completed Job309 @169
+Job310		169		174
+Job311		174		179
+Job313		179		184
+Job315		184		189
+Job316		189		191		Completed Job316 @191
+Job317		191		193		Completed Job317 @193
+Job318		193		198
+Job301		198		200		Completed Job301 @200
+Job303		200		205
+Job310		205		210		Completed Job310 @210
+Job311		210		211		Completed Job311 @211
+Job313		211		213		Completed Job313 @213
+Job315		213		216		Completed Job315 @216
+Job318		216		221
+Job303		221		226		Completed Job303 @226
+Job318		226		231
+Job318		231		236
+Job318		236		237		Completed Job318 @237
+
+Average turnaround time: 159.72223
+
+CS4310Project $ exit
+exit
+
+Script done on 2019-06-16 17:06:27-0700
