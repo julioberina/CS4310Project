@@ -10,9 +10,15 @@ import java.util.stream.Collectors;
 
 public class Main {
   public static void main(String[] args) throws IOException {
+
+    /*
+    Use LinkedHashMap to maintain the order in which jobs are read and keep
+    constant time (O(1)) access to a job's burst time
+    */
     LinkedHashMap<String, Integer> jobs = new LinkedHashMap<String, Integer>();
     Scanner file = new Scanner(new File(args[0]));
 
+    // Read two lines per iteration. First item (Job) as key,  Second item (Burst Time) as value
     while (file.hasNextLine())
       jobs.put(file.nextLine(), Integer.parseInt(file.nextLine()));
 
@@ -44,6 +50,8 @@ public class Main {
   public static void shortestJobFirst(LinkedHashMap<String, Integer> jobs) {
     int time = 0;
     float tat = 0.f;
+
+    // Sort jobs by value (burst time), then do FCFS
     LinkedHashMap<String, Integer> jobMap = jobs.entrySet()
         .stream()
         .sorted(Map.Entry.<String, Integer>comparingByValue())
