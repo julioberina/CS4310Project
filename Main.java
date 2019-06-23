@@ -22,6 +22,12 @@ public class Main {
     while (file.hasNextLine())
       jobs.put(file.nextLine(), Integer.parseInt(file.nextLine()));
 
+    // Check for an empty LinkedHashMap
+    if (jobs.isEmpty()) {
+      System.out.println("No contents in file.  It might be empty.");
+      System.exit(0);
+    }
+
     firstComeFirstServe(jobs);
     shortestJobFirst(jobs);
     roundRobin(jobs, 2);
