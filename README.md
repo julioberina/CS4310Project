@@ -27,4 +27,5 @@ To compile each one using `make`, run each one per file respectively:
 * `make test2`
 * `make test3`
 
-For any other file, the format above
+For any other file, the format for running the program with that file is shown
+above this text
